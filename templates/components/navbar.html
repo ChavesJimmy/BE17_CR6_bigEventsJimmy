@@ -1,7 +1,17 @@
 {% block stylesheets %}
-<link rel="stylesheet" href="{{asset('style/styleNavbar.css')}}">        {% endblock %}
+<link rel="stylesheet" href="{{asset('style/styleNavbar.css')}}">        
+{% endblock %}
 <nav class="navbar">
-    <span>Big Events Jimmy</span>
-    <a href="">Home</a>
+    <span id="logo">Big Events Jimmy</span>
+    <a href="/">Home</a>
     <a href="/new">Add Events</a>
+</nav>
+<nav class="navbar">
+    
+    <a href="/music">Music</a>
+    <a href="/christmas">Christmas</a>
+    <a href="/sport">Sport</a>
+    <a href="/theater">Theater</a>    
+    <a href="/other">Other</a>
+
 </nav>

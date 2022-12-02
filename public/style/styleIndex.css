@@ -4,7 +4,8 @@
 .card{
     width:300px;
     height: 500px;
-    border: solid;
+    border: solid 5px;
+    color: whitesmoke;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -12,8 +13,12 @@
     margin: auto;
     border-radius: 25px;
     text-align: center;
-    background-color:lightskyblue;
-    box-shadow: lightcoral 3px 3px 3px 3px;
+    background-color:darkred;
+    box-shadow: darkred 3px 3px 10px 3px;
+    transition: 0.5s;
+}
+.card:hover{
+    transform: scale(1.05);
 }
 .flex{
     display: flex;
@@ -24,10 +29,12 @@
 img{
     width: 100% ;
     border-radius: 25px;
+    height: 250px;
+    object-fit: cover;
 }
 h1{
     text-align: center;
-    background-color: lightskyblue;
+    background-color: darkred;
     padding: 1rem;
     margin: auto;
     width: 50%;
@@ -37,7 +44,8 @@ h1{
     font-family:'Times New Roman', Times, serif;
     font-size: 250%;
     border-radius: 25px;
-    color: rgb(246, 7, 7);
+    box-shadow: darkred 3px 3px 10px 3px;
+    color: whitesmoke;
 }
 h5{
     font-weight: bold;
@@ -46,6 +54,20 @@ h5{
     width: 80%;
     margin: auto;
 }
-ul{
-    list-style: none;
+p{
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 120%;
+    border-bottom: solid;
+}
+#show{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: none;
+}  
+.norecord{
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+    font-size: 500%;
 }

@@ -1,4 +1,45 @@
+{% block body %}
+<div id="form" style="
+display:flex;
+background-color:whitesmoke; 
+margin:auto; 
+flex-direction:column;">
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+
+<div class="formElement">
+    {{ form_row(form.name) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.date) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.startTime) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.description) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.image) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.capacity) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.contactEmail) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.contactPhone) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.type) }}
+</div>
+<div class="formElement">
+    {{ form_row(form.URL) }}
+</div><div class="formElement">
+    {{ form_row(form.address) }}
+</div>
+    <button class="btn" style="color:darkred">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+</div>  
+{% endblock %}

@@ -1,11 +1,58 @@
 .navbar{
-    background-color: lightskyblue;
-    color: red;
-    border: solid 3px;
+    background-color: darkred;
+    color: white;
+    border: solid 5px white;
+    box-shadow: darkred 2px 2px 12px 2px;
     border-radius: 25px;
     padding: 1rem;
-    height: 4rem;
     display: flex;
     justify-content: space-evenly;
+    margin: 2rem;
+    font-weight: bold;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    border-top: solid;
+    border-bottom: solid;
+    border-radius: 25px;
+    width: 10%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    transition: 0.5s;
+    padding: 0.5rem;
+}
+a:hover{
+    background-color: whitesmoke;
+    color:darkred;
+    border-top: double 5px darkred;
+    border-bottom: double 5px darkred;
+
+}
+#logo{
+    border:solid 3px;
+    background-color: whitesmoke;
+    color:darkred;
+    padding: 1rem;
+    position: absolute;
+    top: 2.7rem;
+    font-size: 125%;
+    border-radius: 25px;
+    font-family:monospace;
+}
+#logo:hover{
+    transform: scale(1.5);
+    z-index: 1;
+    background-color: darkred;
+    color:whitesmoke;
+    border: 5px whitesmoke double;
+    font-weight: bolder;
+    box-shadow: whitesmoke 2px 2px 10px 2px;
+}
+#type{
     margin: auto;
+    text-align: center;
+    color: darkred;
 }

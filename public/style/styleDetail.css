@@ -1,15 +1,29 @@
 #body{
-    background-color: lightseagreen;
+    background-color: darkred;
     padding: 2rem;
     border: solid 5px ;
     border-radius: 25px;
+    color: black;
     text-align: center;
 }
 img{
     width: 80%;
     border-radius: 25px;
+    margin-bottom: 1rem;
+
+}
+h1{
+    background-color: black;
+    color: darkred;
+    width:50%;
+    margin: auto;
+    padding: 1.5rem;
+    border-radius: 25px;
+    font-size: 250%;
+    margin-bottom: 1rem;
 }
 #infos{
+    margin-top: 1rem;
     background-color: whitesmoke;
     border: solid 5px;
     width: 80%;
@@ -18,9 +32,12 @@ img{
     font-weight: bold;
     font-size: 150%;
     padding: 1rem;
+    margin-bottom: 1rem;
+
 }
 h3{
-    background-color: lightseagreen;
+    background-color: darkred;
+    color: whitesmoke;
     width: 75%;
     margin: auto;
     margin-top: 1rem;
@@ -28,4 +45,22 @@ h3{
     border: solid 5px;
     border-radius: 25px;
     padding: 0.5rem;
+}
+#link{
+    color: darkred;
+    border: none;
+    text-decoration: underline;
+}
+#blockbtn{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 25%;
+    margin: auto;
+    border-radius: 25px;
+}
+.buttonEdit, .buttonDelete{
+    width:100px
 }

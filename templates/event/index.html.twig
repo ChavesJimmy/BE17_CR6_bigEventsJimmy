@@ -14,19 +14,17 @@
             <div class="card-body">
               <h5 class="card-title">{{event.name}}</h5>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Date : {{event.date}}</li>
-              <li class="list-group-item">Place: {{event.address}}</li>
-              <li class="list-group-item">More infos :                     <a href="{{ path('app_event_show', {'id': event.id}) }}">show</a>
-              </li>
-            </ul>
+            <div class="list-group">
+              <p class="list-group-item">Date : {{event.date}}</p>
+              <p class="list-group-item">Place: {{event.address}}</p>
+              <p class="list-group-item">More infos :                     <a id="show" href="{{ path('app_event_show', {'id': event.id}) }}">DETAILS</a>
+              </p>
+            </div>
 
           </div>
         {% else %}
     </div>
-            <tr>
-                <td colspan="13">no records found</td>
-            </tr>
+            <div class="norecord"> no events found</div>
         {% endfor %}
     </div>
 

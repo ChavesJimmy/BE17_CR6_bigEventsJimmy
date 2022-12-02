@@ -19,6 +19,41 @@ class EventController extends AbstractController
             'events' => $eventRepository->findAll(),
         ]);
     }
+    #[Route('/sport', name: 'app_event_indexSport', methods: ['GET'])]
+    public function sport(EventRepository $eventRepository): Response
+    {
+        return $this->render('event/index.html.twig', [
+            'events' => $eventRepository->findBy(['type'=>'sport']),
+        ]);
+    }
+    #[Route('/christmas', name: 'app_event_indexChristmas', methods: ['GET'])]
+    public function christmas(EventRepository $eventRepository): Response
+    {
+        return $this->render('event/index.html.twig', [
+            'events' => $eventRepository->findBy(['type'=>'christmas']),
+        ]);
+    }
+    #[Route('/theater', name: 'app_event_indextheater', methods: ['GET'])]
+    public function theater(EventRepository $eventRepository): Response
+    {
+        return $this->render('event/index.html.twig', [
+            'events' => $eventRepository->findBy(['type'=>'theater']),
+        ]);
+    }
+    #[Route('/other', name: 'app_event_indexother', methods: ['GET'])]
+    public function other(EventRepository $eventRepository): Response
+    {
+        return $this->render('event/index.html.twig', [
+            'events' => $eventRepository->findBy(['type'=>'other']),
+        ]);
+    }
+    #[Route('/music', name: 'app_event_indexmusic', methods: ['GET'])]
+    public function music(EventRepository $eventRepository): Response
+    {
+        return $this->render('event/index.html.twig', [
+            'events' => $eventRepository->findBy(['type'=>'music']),
+        ]);
+    }
 
     #[Route('/new', name: 'app_event_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EventRepository $eventRepository): Response
@@ -39,7 +74,7 @@ class EventController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_event_show', methods: ['GET'])]
+    #[Route('/details/{id}', name: 'app_event_show', methods: ['GET'])]
     public function show(Event $event): Response
     {
         return $this->render('event/show.html.twig', [
