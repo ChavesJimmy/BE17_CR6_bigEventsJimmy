@@ -1,55 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Event index{% endblock %}
-
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('style/styleIndex.css')}}">
+{% endblock %}
 {% block body %}
-    <h1>Event index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Date</th>
-                <th>StartTime</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Capacity</th>
-                <th>ContactEmail</th>
-                <th>ContactPhone</th>
-                <th>Address</th>
-                <th>URL</th>
-                <th>Type</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+<div class="body">
+    <h1 class="title">Our Events</h1>
+    <div class="flex">
         {% for event in events %}
-            <tr>
-                <td>{{ event.id }}</td>
-                <td>{{ event.name }}</td>
-                <td>{{ event.date }}</td>
-                <td>{{ event.startTime ? event.startTime|date('H:i:s') : '' }}</td>
-                <td>{{ event.description }}</td>
-                <td>{{ event.image }}</td>
-                <td>{{ event.capacity }}</td>
-                <td>{{ event.contactEmail }}</td>
-                <td>{{ event.contactPhone }}</td>
-                <td>{{ event.address }}</td>
-                <td>{{ event.URL }}</td>
-                <td>{{ event.type }}</td>
-                <td>
-                    <a href="{{ path('app_event_show', {'id': event.id}) }}">show</a>
-                    <a href="{{ path('app_event_edit', {'id': event.id}) }}">edit</a>
-                </td>
-            </tr>
+        <div class="card">
+            <img src="{{event.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{event.name}}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Date : {{event.date}}</li>
+              <li class="list-group-item">Place: {{event.address}}</li>
+              <li class="list-group-item">More infos :                     <a href="{{ path('app_event_show', {'id': event.id}) }}">show</a>
+              </li>
+            </ul>
+
+          </div>
         {% else %}
+    </div>
             <tr>
                 <td colspan="13">no records found</td>
             </tr>
         {% endfor %}
-        </tbody>
-    </table>
+    </div>
 
-    <a href="{{ path('app_event_new') }}">Create new</a>
 {% endblock %}

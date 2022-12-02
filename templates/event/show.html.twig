@@ -1,66 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Event{% endblock %}
+{% block title %}Event {{event.name}}{% endblock %}
+{% block stylesheets %}
 
-{% block body %}
-    <h1>Event</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ event.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ event.name }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{{ event.date }}</td>
-            </tr>
-            <tr>
-                <th>StartTime</th>
-                <td>{{ event.startTime ? event.startTime|date('H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ event.description }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ event.image }}</td>
-            </tr>
-            <tr>
-                <th>Capacity</th>
-                <td>{{ event.capacity }}</td>
-            </tr>
-            <tr>
-                <th>ContactEmail</th>
-                <td>{{ event.contactEmail }}</td>
-            </tr>
-            <tr>
-                <th>ContactPhone</th>
-                <td>{{ event.contactPhone }}</td>
-            </tr>
-            <tr>
-                <th>Address</th>
-                <td>{{ event.address }}</td>
-            </tr>
-            <tr>
-                <th>URL</th>
-                <td>{{ event.URL }}</td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>{{ event.type }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_event_index') }}">back to list</a>
-
-    <a href="{{ path('app_event_edit', {'id': event.id}) }}">edit</a>
-
-    {{ include('event/_delete_form.html.twig') }}
+<link rel="stylesheet" href="{{asset('style/styleDetail.css')}}">
 {% endblock %}
+{% block body %}
+<div id="body">
+    <h1>{{event.name}} ({{event.type}})</h1>
+
+        <div>
+        <img src="{{event.image}}" alt="">
+        </div>
+        <div id="infos">
+        <div>
+            <h3>Description</h3>
+            {{event.description}}
+        </div>
+        <div>
+            <h3>Useful infos</h3>
+            ADDRESS :
+            {{event.address}} (capacity => {{event.capacity}}) <br>
+            TIME :
+            {{event.startTime|date('H:m')}}
+        </div>
+        <div>
+            <h3>Contact</h3>
+            Phone:{{event.contactPhone}} <br>
+            Email:{{event.contactEmail}} <br> <br>
+        </div>
+        <div>
+            Link to the website : <a href="{{event.URL}}">Website {{event.name}}</a>
+        </div>
+    </div>
+
+   
+</div>
+<a href="{{ path('app_event_edit', {'id': event.id}) }}">edit</a>
+
+<a href="{{ path('app_event_delete', {'id': event.id}) }}">delete</a>
+
+    {% endblock %}

@@ -1,0 +1,31 @@
+#body{
+    background-color: lightseagreen;
+    padding: 2rem;
+    border: solid 5px ;
+    border-radius: 25px;
+    text-align: center;
+}
+img{
+    width: 80%;
+    border-radius: 25px;
+}
+#infos{
+    background-color: whitesmoke;
+    border: solid 5px;
+    width: 80%;
+    margin: auto;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 150%;
+    padding: 1rem;
+}
+h3{
+    background-color: lightseagreen;
+    width: 75%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border: solid 5px;
+    border-radius: 25px;
+    padding: 0.5rem;
+}

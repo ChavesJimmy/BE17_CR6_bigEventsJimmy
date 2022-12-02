@@ -1,0 +1,11 @@
+.navbar{
+    background-color: lightskyblue;
+    color: red;
+    border: solid 3px;
+    border-radius: 25px;
+    padding: 1rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
