@@ -34,9 +34,9 @@
         </div>
     </div>
 <div id="blockbtn">
-<a class="buttonEdit" href="{{ path('app_event_edit', {'id': event.id}) }}">edit</a>
-<a class="buttonDelete" href="{{ path('app_event_delete', {'id': event.id}) }}">delete</a>
+<a id="buttonEdit" href="{{ path('app_event_edit', {'id': event.id}) }}">edit</a>
 </div>
+<br>{{ include('event/_delete_form.html.twig') }}
 
 
     {% endblock %}

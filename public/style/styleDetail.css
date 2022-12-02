@@ -53,14 +53,25 @@ h3{
 }
 #blockbtn{
     background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: block;
     padding: 1rem;
     width: 25%;
     margin: auto;
     border-radius: 25px;
 }
-.buttonEdit, .buttonDelete{
-    width:100px
+#delete{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 25px;
+    border: double 5px;
+}
+#delete:hover{
+    transform: scale(1.1);
+    box-shadow: black 2px 2px 10px 2px;
+    font-size: 250%;
+}
+#buttonEdit{
+    width:200px
 }

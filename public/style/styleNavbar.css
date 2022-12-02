@@ -45,7 +45,7 @@ a:hover{
 #logo:hover{
     transform: scale(1.5);
     z-index: 1;
-    background-color: darkred;
+    background-color: black;
     color:whitesmoke;
     border: 5px whitesmoke double;
     font-weight: bolder;

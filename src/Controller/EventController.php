@@ -74,7 +74,7 @@ class EventController extends AbstractController
         ]);
     }
 
-    #[Route('/details/{id}', name: 'app_event_show', methods: ['GET'])]
+    #[Route('/{id}', name: 'app_event_show', methods: ['GET'])]
     public function show(Event $event): Response
     {
         return $this->render('event/show.html.twig', [
@@ -100,7 +100,7 @@ class EventController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_event_delete', methods: ['POST'])]
+    #[Route('/{id}', name: 'app_event_delete', methods: ['GET','POST'])]
     public function delete(Request $request, Event $event, EventRepository $eventRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$event->getId(), $request->request->get('_token'))) {

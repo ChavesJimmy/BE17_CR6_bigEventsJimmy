@@ -1,11 +1,9 @@
+{% block stylesheet %}
+<link rel="stylesheet" href="{{asset('style/styleForm.css')}}">
+{% endblock %}
 {% block body %}
-<div id="form" style="
-display:flex;
-background-color:whitesmoke; 
-margin:auto; 
-flex-direction:column;">
+<div id="form">
 {{ form_start(form) }}
-
 
 <div class="formElement">
     {{ form_row(form.name) }}
@@ -16,7 +14,7 @@ flex-direction:column;">
 <div class="formElement">
     {{ form_row(form.startTime) }}
 </div>
-<div class="formElement">
+<div class="formElement description">
     {{ form_row(form.description) }}
 </div>
 <div class="formElement">
